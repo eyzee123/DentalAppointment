@@ -1,5 +1,5 @@
 const pool = require('../config/db');
-const User = require('../models/userModel');
+const User = require('../models/UserModel');
 
 const findUserByEmail = async (email) => {
   const { rows } = await pool.query('SELECT * FROM users WHERE email = $1', [email]);

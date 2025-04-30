@@ -1,0 +1,74 @@
+.dashboard-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+ .appointment-container {
+    margin-top: 20px;
+  }
+  
+ .appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.appointment-item:hover {
+  transform: translateY(-2px);
+}
+
+.appointment-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2d2d2d;
+}
+
+.appointment-info p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.appointment-info span {
+  font-weight: 500;
+  color: #333;
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn.view {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn.view:hover {
+  background-color: #0056b3;
+}
+
+.btn.cancel {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn.cancel:hover {
+  background-color: #a71d2a;
+}

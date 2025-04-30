@@ -1,0 +1,36 @@
+/* src/components/shared/Button.css */
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button.primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .custom-button.primary:hover {
+    background-color: var(--primary-hover-color);
+  }
+  
+  .custom-button.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .custom-button.secondary:hover {
+    background-color: var(--secondary-hover-color);
+  }
+  
+  .button-icon {
+    font-size: 18px;
+  }
+  

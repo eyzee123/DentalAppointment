@@ -11,8 +11,21 @@ const getBooking = async (patientId) => {
     return appointments;
   };
 
+const cancelBooking = async (bookingId) => {
+  const appointments = await bookingRepository.cancelAppointment(bookingId);
+  return appointments;
+};
+
+const updateBooking = async (appointment, bookingId) => {
+  const appointments = await bookingRepository.updateAppointment(appointment, bookingId);
+  return appointments;
+};
+
+
 module.exports = {
     addBooking,
     getBooking,
+    cancelBooking,
+    updateBooking
 };
   

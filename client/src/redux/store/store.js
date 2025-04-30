@@ -5,6 +5,7 @@ import signupReducer from '../slice/signupSlice';
 import dentistReducer from '../slice/dentistSlice';
 import timeslotReducer from '../slice/timeslotSlice';
 import bookingReducer from '../slice/bookingSlice';
+import bookingPrefillReducer from '../slice/bookingPrefillSlice';
 
 
 
@@ -16,7 +17,8 @@ const store = configureStore({
     signup: signupReducer,
     dentists: dentistReducer,
     timeslot: timeslotReducer,
-    booking: bookingReducer
+    booking: bookingReducer,
+    bookingPrefill: bookingPrefillReducer,
   },
 });
 

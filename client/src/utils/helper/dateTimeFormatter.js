@@ -16,3 +16,11 @@ export const formatTime = (timeStr) => {
     return `${hour12}:${minute} ${period}`;
 }
 
+export const formatDateToPicker = (date) => {
+    const newDate = new Date(date);
+    const yyyy = newDate.getFullYear();
+    const mm = String(newDate.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+    const dd = String(newDate.getDate()).padStart(2, '0');
+    const formatted = `${yyyy}-${mm}-${dd}`
+    return formatted;
+}

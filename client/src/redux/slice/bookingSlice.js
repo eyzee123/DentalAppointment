@@ -1,6 +1,6 @@
 // src/store/bookingSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { addAppointment, getAppointments } from '../../service/bookingService';
+import { addAppointment, cancelAppointments, getAppointments, updateAppointment } from '../../service/bookingService';
 
 export const bookAppointment = createAsyncThunk(
   'booking/bookAppointment',
@@ -23,6 +23,29 @@ export const fetchAppointments = createAsyncThunk(
     }
   }
 );
+
+export const cancelAppointment = createAsyncThunk(
+  'appointments/cancel',
+  async (id, { rejectWithValue }) => {
+    try {
+      return await cancelAppointments(id);
+    } catch (error) {
+      return rejectWithValue(error.response?.data || 'Cancel appointment failed');
+    }
+  }
+);
+
+export const rescheduleAppointment = createAsyncThunk(
+  'booking/updateAppointment',
+  async (appointmentData, { rejectWithValue }) => {
+    try {
+      return await updateAppointment(appointmentData);
+    } catch (error) {
+      return rejectWithValue(error.response?.data || 'Update failed');
+    }
+  }
+);
+
 
 const bookingSlice = createSlice({
   name: 'booking',
@@ -65,10 +88,12 @@ const bookingSlice = createSlice({
         state.success = true;
         state.items = action.payload;
       })
-      .addCase(fetchAppointments.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload;
-      });
+      .addCase(cancelAppointment.fulfilled, (state, action) => {
+        state.items = state.items.filter((appt) => appt.id !== action.payload);
+      })
+      .addCase(rescheduleAppointment.fulfilled, (state, action) => {
+        state.items = state.items.filter((appt) => appt.id !== action.payload);
+      })
   },
 });
 

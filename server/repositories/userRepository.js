@@ -19,7 +19,20 @@ const createUser = async ({ name, email, password_hash, phone_number }) => {
   return new User(rows[0]);
 };
 
+const editUser = async ({name,email,phone_number},userId) => {
+  const query = `
+    UPDATE users set name=$2, email=$3, phone_number=$4 WHERE id=$1
+    RETURNING id, name, email, phone_number, created_at;
+  `;
+  const values = [userId, name, email, phone_number];
+
+  const { rows } = await pool.query(query, values);
+  return new User(rows[0]);
+};
+
+
 module.exports = {
   findUserByEmail,
   createUser,
+  editUser,
 };

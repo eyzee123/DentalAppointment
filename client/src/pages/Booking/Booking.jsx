@@ -125,7 +125,6 @@ const BookingPage = () => {
     <Toaster position="top-right" />
     <div className="booking-container">
       <h1>Book Your Appointment</h1>
-
       <div className="form-group">
         <label>Select Dentist: </label>
         <select disabled={dentist} value={selectedDentist} onChange={handleDentistChange}>

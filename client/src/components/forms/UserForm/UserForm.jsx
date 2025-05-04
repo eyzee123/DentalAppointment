@@ -30,9 +30,9 @@ function UserForm({ formData, handleChange, handleSubmit, loading, isEditing = f
               required
             />
           </div>
-
+          {!isEditing &&
           <div className="input-group">
-            <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
@@ -42,8 +42,9 @@ function UserForm({ formData, handleChange, handleSubmit, loading, isEditing = f
               onChange={handleChange}
               required
             />
-          </div>
-
+        </div>
+          }
+          
           <div className="input-group">
             <label htmlFor="phone_number">Phone Number</label>
             <input
@@ -51,7 +52,7 @@ function UserForm({ formData, handleChange, handleSubmit, loading, isEditing = f
               id="phone_number"
               name="phone_number"
               placeholder="Enter your phone number"
-              value={formData.phoneNumber}
+              value={formData.phone_number}
               onChange={handleChange}
               required
             />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setError, setLoading, clearForm, setFormData } from '../../redux/slice/signupSlice';
+import { setError, setLoading, clearForm, setFormData } from '../../redux/slice/userSlice';
 import '../Signup/Signup.css';
 import { registerUser } from '../../service/authService';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +9,7 @@ import UserForm from '../../components/forms/UserForm/UserForm';
 const SignUp = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { formData, loading, error } = useSelector(state => state.signup);
+  const { formData, loading, error } = useSelector(state => state.user);
 
   
   const handleChange = (e) => {

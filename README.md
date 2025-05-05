@@ -107,8 +107,19 @@
         ON DELETE CASCADE;
 
 **5. Deployment**
- - Kubernetes: setup, configuration. Handling of secrets, config maps.
- - Database: AWS RDS
+   **5.1 Frontend & Backend**
+   
+      - Prerequisites
+        - Setup Docker
+        - Kubernetes Cluster (EKS)
+        - configure kubectl
+     - Dockerize the Frontend
+     - Build & Push Docker Image to ECR
+     - Create Kubernetes Deployment and Service
+     - Apply Kubernetes Config
+     - Access the Application
+       
+
 
 **5. Assumptions**
  - Dental Clinic Name will be static

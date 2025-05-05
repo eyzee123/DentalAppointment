@@ -19,14 +19,14 @@
    PostgreSQL
 
 **2.Components**
-    **2.1 Frontend**
-      - Pages: /login, /signup, /home, /dashboard, /booking, /profile
-      - Components: forms(signupForm),shared(e.g. buttons,dialog), Navbar
-      - State Management: Redux with toolkit
-      - Service: api,booking,auth,user
-      - Utils: helper functions
-      - Routes: Protected,Public
-      - Global Assets: images, colors, typography 
+  **2.1 Frontend**
+    - Pages: /login, /signup, /home, /dashboard, /booking, /profile
+    - Components: forms(signupForm),shared(e.g. buttons,dialog), Navbar
+    - State Management: Redux with toolkit
+    - Service: api,booking,auth,user
+    - Utils: helper functions
+    - Routes: Protected,Public
+    - Global Assets: images, colors, typography 
 
   **2.2 Backend**
       - Routes

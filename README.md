@@ -106,6 +106,9 @@
         ON UPDATE NO ACTION
         ON DELETE CASCADE;
 
+**5. Deployment**
+ - Kubernetes: setup, configuration. Handling of secrets, config maps.
+ - Database: AWS RDS
 
 **5. Assumptions**
  - Dental Clinic Name will be static

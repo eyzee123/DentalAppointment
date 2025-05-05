@@ -107,6 +107,7 @@
         ON DELETE CASCADE;
 
 **5. Deployment**
+
       - Prerequisites
         - Setup Docker
         - Kubernetes Cluster (EKS)

@@ -35,6 +35,7 @@
       - Repository
 
 **3. Database Schema**
+
     CREATE TABLE IF NOT EXISTS public.appointments
     (
         id serial NOT NULL,

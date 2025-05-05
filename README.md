@@ -5,7 +5,7 @@
   - **Backend**: Powered by Node.js with Express.
   - **Database**: PostgreSQL hosted on AWS RDS.
   - **Deployment**: AWS Services with Kubernetes
-    - ECR - Elastice Container Registry
+    - ECR - Elastic Container Registry
     - EC2
     - RDS
   

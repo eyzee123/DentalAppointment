@@ -26,11 +26,11 @@
     - Global Assets: images, colors, typography 
 
   **2.2 Backend**
-  
-      - Routes
-      - Controller
-      - Service
-      - Repository
+      - Modules: auth, user, booking, dentist, timeslot
+      - Routes: GET, POST, PUT, PATCH
+      - Controller: 
+      - Service: 
+      - Repository:
 
 **3. Database Schema**
 

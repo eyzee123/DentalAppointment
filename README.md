@@ -11,13 +11,7 @@
   
 **1.2 Architecture Diagram**
 
-    Browser
-      ↓
-   Frontend (React Framework)
-      ↓
-   API Routes / External Backend (Node.js / Express)
-      ↓
-   PostgreSQL
+    Browser -> Frontend (React Framework) -> API Routes / External Backend (Node.js / Express) -> PostgreSQL
 
 **2.Components**
 

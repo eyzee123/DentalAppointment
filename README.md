@@ -10,23 +10,23 @@
     - RDS
   
 **1.2 Architecture Diagram**
- Browser
-   ↓
-Frontend (React Framework)
-   ↓
-API Routes / External Backend (Node.js / Express)
-   ↓
-PostgreSQL
+    Browser
+      ↓
+   Frontend (React Framework)
+      ↓
+   API Routes / External Backend (Node.js / Express)
+      ↓
+   PostgreSQL
 
 **2.Components**
     **2.1 Frontend**
-      Pages: /login, /signup, /home, /dashboard, /booking, /profile
-      Components: forms(signupForm),shared(e.g. buttons,dialog), Navbar
-      State Management: Redux with toolkit
-      Service: api,booking,auth,user
-      Utils: helper functions
-      Routes: Protected,Public
-      Global Assets: images, colors, typography 
+      - Pages: /login, /signup, /home, /dashboard, /booking, /profile
+      - Components: forms(signupForm),shared(e.g. buttons,dialog), Navbar
+      - State Management: Redux with toolkit
+      - Service: api,booking,auth,user
+      - Utils: helper functions
+      - Routes: Protected,Public
+      - Global Assets: images, colors, typography 
 
   **2.2 Backend**
       - Routes
